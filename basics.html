@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <h1>Hello - body</h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+
+
+
+    <script type="text/babel">
+        //------------------------------------------------------------
+        var divid1 = document.getElementById("d1");
+        var divid2 = document.getElementById("d2");
+        var divid3 = document.getElementById("d3");
+        var divid4=document.getElementById("d4");
+        var divid5=document.getElementById("d5");
+
+
+
+        var dh1 = document.createElement("h1");
+        dh1.innerHTML = "This is Edupoly  - DOM";
+        dh1.style.color = "Blue";
+        divid1.appendChild(dh1);
+        //--------------------------------------------------------
+
+        var rh1 = React.createElement("h1", { style: { color: "Purple" } }, "A gateway to your coding  -  React");
+        ReactDOM.render(rh1, divid2);
+
+        //------------------------------------------------------
+
+        var jh1 = <h1 style={{ color: "Red" }}>Code your career  - JSX</h1>
+        ReactDOM.render(jh1, divid3);
+        //---------------------------------------------------------------
+
+        var myObj = [
+            {
+                name: "Anom",
+                age: 19,
+                gender: "Male"
+            },
+            {
+                name: "Megha",
+                age: 19,
+                gender: "Female"
+            },
+            {
+                name: "Subham",
+                age: 25,
+                gender: "Male"
+            },
+        ]
+
+        var myTable=<table border="2px">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Gender</th>
+
+                        </tr>
+                            
+                    </thead> 
+                    <tbody>
+                        {myObj.map((a)=> {
+                            return (
+                            <tr>
+                                <td>{a.name}</td>
+                                <td>{a.age}</td>
+                                <td>{a.gender}</td>
+                             </tr>
+                            )
+                        })}
+                     </tbody>   
+            
+            </table>
+            ReactDOM.render(myTable,divid4);
+    //--------------------------------------------------------
+
+            var ar=["Body", "DOM","React","JSX"];
+            var myList=<ul>
+                        {ar.map((list)=> {
+                            return (
+                                <li>{list}</li>
+                            )
+                        })}
+                </ul>
+            ReactDOM.render(myList,divid5);
+    //----------------------------------------------------------
+    </script>
+</body>
+
+</html>

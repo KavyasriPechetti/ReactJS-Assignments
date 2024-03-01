@@ -1,0 +1,731 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div id="d1"></div>
+    <script type="text/babel">
+        var divid = document.getElementById("d1");
+        // function abc(e) {
+        //     alert("Hi");
+        //     console.log("Hai");
+        //     console.log(e);
+        // }
+        // var click= <button onClick={(event)=>{abc(event)}}>Kavya</button>
+        // ReactDOM.render(click,divid);
+        //---------------------------------------------------------------------4
+        // var click=<div onClick={(event)=> {abc(event)}} style={{height:"200px", width:"300px",border:"2px solid"}}>
+        //     Click to see me
+        //     </div>
+        // ReactDOM.render(click,divid);
+
+        // function abc(e) {
+        //     console.log(e);
+        // }
+        //--------------------------------------------------------------------------5
+        // var click=<div onClick={(event)=>{abc(event)}} style={{width:"300px",height:"200px",border:"2px solid"}}>
+        //     click to see me
+        //     </div>
+        // ReactDOM.render(click,divid);
+
+        // function abc(e) {
+        //     console.log(e.clientX);
+        //     console.log(e.clientY);
+        // }
+        //---------------------------------------------------------------------------6
+        // var click=<div onClick={(event)=> {abc(event)}} style={{width:"300px",height:"200px",border:"2px solid"}}>
+        //     Hello, this is Kavya
+        //     </div>
+        // ReactDOM.render(click,divid);
+
+        // function abc(e) {
+        //     console.log(e.target.innerHTML);
+        // }
+        //----------------------------------------------------------------7
+        // var click = <div id="divID" onClick={(event) => { abc(event) }} style={{ width: "300px", height: "200px", border: "2px solid" }}>
+        //     Console Div ID
+        // </div>
+        // ReactDOM.render(click, divid);
+
+        // function abc(e) {
+        //     console.log(e.target.id);
+        // }
+        //----------------------------------------------------------------8
+        // var heading=<h1 onClick={(event)=>{abc(event)}}>All Indians are my brothers and sisters</h1>
+        // ReactDOM.render(heading,divid);
+
+        // function abc(e) {
+        //     console.log(e.target.innerHTML);
+        // }
+        //---------------------------------------------------------9
+        // var btn=<button onClick={(event)=>{abc(event)}}>Click Me</button>
+        // ReactDOM.render(btn,divid);
+
+        // function abc(e) {
+        //     console.log(e);
+        // }
+        //-----------------------------------------------------------10
+        // var txtbox = <div>
+        //     <input type="text" id="inp"/>
+        //     <button onClick={() => { abc() }}>Click to see me</button>
+        // </div>
+
+        // ReactDOM.render(txtbox, divid);
+        // function abc() {
+        //     var output = document.getElementById("inp").value
+        //     console.log(output);
+        // }
+        //---------------------------------------------------------------11
+        // var htxt=<div>
+        //         <input type="text" id="inp"/>
+        //         <button onClick={()=>{abc()}}>Click me</button>
+        //         <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(htxt,divid);
+        //     var hTag=document.getElementById("hEl");
+        //     var iTag=document.getElementById("inp")
+        // function abc() {
+        //    hTag.innerHTML=iTag.value;
+        // }
+        //-----------------------------------------------------------12
+
+        // var uppercase=<div>
+        //         <input type="text" id="inp"/>
+        //         <button onClick={()=>{abc()}}>Click me</button>
+        //         <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(uppercase,divid);
+        //     var hTag=document.getElementById("hEl");
+        //     var iTag=document.getElementById("inp");
+        // function abc() {
+        //    hTag.innerHTML=iTag.value.toUpperCase();
+        // }
+        //----------------------------------------------------------13
+        //     var keyup=<div>
+        //             <input type="text" id="iEl"onKeyUp={()=>{abc()}} />
+        //             <h1 id="hEl"></h1>
+        //         </div>
+        //     ReactDOM.render(keyup,divid);
+        //     var hTag=document.getElementById("hEl");
+        //    var iTag=document.getElementById("iEl");
+        //     function abc() {
+        //         hTag.innerHTML=iTag.value.toUpperCase();
+        //     }
+        //----------------------------------------------------------14
+        // var blur=<div>
+        //     <input type="text" id="iEl" onBlur={(event)=>{abc(event)}}/>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(blur,divid);
+        // var iTag=document.getElementById("iEl");
+        // var hTag=document.getElementById("hEl");
+        // function abc(e) {
+        //     hTag.innerHTML=iTag.value.toUpperCase();
+        // }
+        //-----------------------------------------------------------15
+        // var keyup = <div>
+        //     <input type="text" id="iEl" onKeyUp={(event) => { abc(event) }} />
+        //     <h1 id="hEl"></h1>
+        // </div>
+        // ReactDOM.render(keyup, divid);
+        // var hTag = document.getElementById("hEl");
+
+        // function abc(e) {
+        //     hTag.innerHTML = e.target.value;
+        // }
+        //--------------------------------------------------------------16
+        // var reset=<div>
+        //     <input type="text" onKeyUp={(event)=> {xyz(event)}} id="iEl"/>
+        //     <h1 id="hEl"></h1>
+        //     <button onClick={()=>{abc()}}>Reset</button>
+        //     </div>
+        // ReactDOM.render(reset,divid);
+        // var iTag=document.getElementById("iEl");
+        // var hTag=document.getElementById("hEl");
+        // function xyz() {
+        //     hTag.innerHTML=iTag.value;
+        // }
+        // function abc() {
+        //     iTag.value=" ";
+        // }
+        //-----------------------------------------------------------17
+        // var add = <div>
+        //     <input type="number" id="inp1" /><br /><br />
+        //     <input type="number" id="inp2" /><br /><br />
+        //     <button onClick={() => { abc() }}>Add</button>
+        //     <h1 id="hEl"></h1>
+        // </div>
+        // ReactDOM.render(add, divid);
+        // var hTag = document.getElementById("hEl");
+
+        // function abc() {
+        //     var iTag1 = +document.getElementById("inp1").value;
+        //     var iTag2 = +document.getElementById("inp2").value;
+
+        //     hTag.innerHTML = iTag1 + iTag2;
+        // }
+
+        //-------------------------------------------------------------------18
+        // var add = <div>
+        //     <input type="number" id="inp1" /><br /><br />
+        //     <input type="number" id="inp2" /><br /><br />
+        //     <button onClick={() => { abc() }}>Subtract</button>
+        //     <h1 id="hEl"></h1>
+        // </div>
+        // ReactDOM.render(add, divid);
+        // var hTag = document.getElementById("hEl");
+
+        // function abc() {
+        //     var iTag1 = +document.getElementById("inp1").value;
+        //     var iTag2 = +document.getElementById("inp2").value;
+
+        //     hTag.innerHTML = iTag1 - iTag2;
+        // }
+        //------------------------------------------------------------19
+        // var muldiv=<div>
+        //     <input type="text" id="inp1"/><br/><br/>
+        //     <input type="text" id="inp2"/><br/><br/>
+        //     <button onClick={()=>{mul()}}>Multiply</button><br/><br/>
+        //     <button onClick={()=>{div()}}>Divide</button>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(muldiv,divid);
+        //     var hTag=document.getElementById("hEl");
+        // function mul() {
+        //     var iTag1=document.getElementById("inp1").value;
+        //     var iTag2=document.getElementById("inp2").value;
+        //     hTag.innerHTML=iTag1*iTag2;
+        // }
+
+        // function div() {
+        //     var iTag1=document.getElementById("inp1").value;
+        //     var iTag2=document.getElementById("inp2").value;
+        //     hTag.innerHTML=iTag1/iTag2;
+        // }
+        //----------------------------------------------------------------20
+        // var radio=<div>
+        //     <input id="inp1" type="radio" value="India" onChange={(event)=>{abc(event)}}/>IND
+        //     <input id="inp2" type="radio" value="United States of America" onChange={(event)=>{xyz(event)}}/>USA
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(radio,divid);
+        // var hTag=document.getElementById("hEl");
+        // var iTag1=document.getElementById("inp1");
+        // var iTag2=document.getElementById("inp2");
+        // function abc(e) {
+        //     hTag.innerHTML=e.target.value;
+        //     iTag2.checked="";
+        //     iTag2.innerHTML="";
+        // }
+
+        // function xyz(e) {
+        //     hTag.innerHTML=e.target.value;
+        //     iTag1.checked="";
+        //     iTag1.innerHTML="";
+        // }
+        //------------------------------------------------------------21
+        // var img = <div>
+        //     <input id="inp1" type="radio" value="male" onChange={(event) => { abc(event) }} />Male
+        //     <input id="inp2" type="radio" value="female" onChange={(event) => { abc(event) }} />Female<br/>
+        //     <img src="" id="im" />
+
+        // </div>
+        // ReactDOM.render(img, divid);
+        // var imgID = document.getElementById("im");
+        // var maleimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17YmF-rLdK6WcLcTx8RoaSkS4jHDLj20GgQ&s";
+        // var femaleimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCI89MLwUuQB5nBrOGNBn-Oiqz_tSIyKzsA&s";
+        // var iTag1=document.getElementById("inp1");
+        //  var iTag2=document.getElementById("inp2");
+        // function abc(e) {
+        //     if (e.target.value == "male") {
+        //         imgID.src = maleimg;
+        //         iTag2.checked="";
+        //         iTag2.value="";
+
+        //     } else {
+        //         imgID.src = femaleimg;
+        //         iTag1.value="";
+        //         iTag1.checked="";
+        //     }
+        // }
+        //------------------------------------------------------------22
+        // var select=<div>
+        //     <select onChange={(event)=>{abc(event)}}>
+        //         <option value="REACT">React</option>
+        //         <option value="ANGULAR">Angular</option>
+        //         <option value="JAVA">Java</option>
+        //         <option value="PYTHON">Python</option>
+
+        //         </select>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(select,divid);
+        // var hTag=document.getElementById("hEl");
+        // function abc(e) {
+        //     hTag.innerHTML=e.target.value;
+        // }
+        //--------------------------------------------------------------23
+        // var checkbox=<div>
+        //         <input type="checkbox" value="C" onChange={(event)=>{abc(event)}}/>C <br/>
+        //         <input type="checkbox" value="C++" onChange={(event)=>{abc(event)}}/>C++ <br/>
+        //         <input type="checkbox" value="Java" onChange={(event)=>{abc(event)}}/>Java <br/>
+        //         <input type="checkbox" value="Python" onChange={(event)=>{abc(event)}}/>Python <br/>
+        //         <input type="checkbox" value="React" onChange={(event)=>{abc(event)}}/>React <br/>
+        //         <input type="checkbox" value="Angular" onChange={(event)=>{abc(event)}}/>Angular <br/>
+        //         <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(checkbox,divid);
+        // var ar=[];
+        // var hTag=document.getElementById("hEl");
+        // function abc(e) {
+        //     if(e.target.checked==0) {     //false also
+        //         var ind=ar.indexOf(e.target.value);
+        //         ar.splice(ind,1);
+        //         hTag.innerHTML=ar
+        //     } else {
+        //         ar.push(e.target.value);
+        //         hTag.innerHTML=ar;
+        //     }
+        // }
+
+        //---------------------------------------------------------------24
+        // var datedisplay=<div>
+        //     <input type="date" onChange={(event)=>{abc(event)}}/>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(datedisplay,divid);
+        // var hTag=document.getElementById("hEl");
+
+        // function abc(e) {
+        //     hTag.innerHTML=e.target.value;
+        // }
+        //-----------------------------------------------------------------25
+        // var btnclk=<div>
+        //     <button onClick={()=>{abc(1)}}>Ones</button>
+        //     <button onClick={()=>{abc(20)}}>Tens</button>
+        //     <button onClick={()=>{abc(300)}}>Hundreds</button>
+        //     <button onClick={()=>{abc(4000)}}>Thousands</button>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(btnclk,divid);
+
+        // function abc(e) {
+        //     document.getElementById("hEl").innerHTML=e;
+        // }
+        //---------------------------------------------------------------------26
+        // var arr=["kavya","sri","pechetti","goodgirl"];
+        // var list=<ul>
+        //         {
+        //             arr.map((a,i)=>{
+        //                 return (
+        //                 <li onClick={()=>(abc(i))}>{a}</li>
+        //             )})
+        //         }
+        //     </ul>
+        // ReactDOM.render(list,divid);
+
+        // function abc(i) {
+        //     alert(i);
+        // }
+        //------------------------------------------------------------------27
+        // var arr = ["kavya", "sri", "pechetti", "goodgirl"];
+        // var list = <ul>
+        //     {
+        //         arr.map((a) => {
+        //             return (
+        //                 <li onClick={() => (abc(a))}>{a}</li>
+        //             )
+        //         })
+        //     }
+        // </ul>
+        // ReactDOM.render(list, divid);
+
+        // function abc(a) {
+        //     alert(a);
+        // }
+        //-----------------------------------------------------------------------28
+        // var obj = [
+        //     {
+        //         firstname: "kavya",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Arshi",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Reshma",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Poojitha",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Raji",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     }
+        // ]
+
+        // var list=<div>
+        //         {
+        //             obj.map((a,i)=>{
+        //                 return (
+        //                     <li key={i} onClick={()=>{abc(a.firstname)}}>{a.firstname}</li>
+        //                 )
+        //             })
+        //         }
+        //     </div>
+        // ReactDOM.render(list,divid);
+
+        // function abc(name) {
+        //     alert(name);
+        // }
+        //-----------------------------------------------------------------29
+        // var obj = [
+        //     {
+        //         firstname: "kavya",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Arshi",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Reshma",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Poojitha",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Raji",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     }
+        // ]
+        // var index=<div>
+        //         {
+        //             obj.map((a,ind)=> {
+        //                 return (
+        //                     <li > {a.firstname}
+        //                         <button onClick={()=>{abc(ind,a)}}>look where I am</button>
+        //                         </li>
+
+        //                 )
+        //             })
+        //         }
+        //         <h1 id="hEl"> </h1>
+        //     </div>
+        // ReactDOM.render(index,divid);
+
+        // function abc(i,s) {
+        //     document.getElementById("hEl").innerHTML=s.firstname + " "+s.lastname+" is at index "+i;
+        // }
+        //-------------------------------------------------------------30
+        // var obj = [
+        //     {
+        //         firstname: "kavya",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Arshi",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Reshma",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Poojitha",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Raji",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     }
+        // ]
+
+        // var nameInd=<div>
+        //     {
+        //         obj.map((a,ind)=>{
+        //             return (
+        //             <li onClick={()=>{abc(a.firstname,ind)}}>{a.firstname}</li>
+        //         )})
+        //     }
+        //     <h1 id="hEl1"></h1>
+        //     <h2 id="hEl2"></h2>
+
+        //     </div>
+        // ReactDOM.render(nameInd,divid);
+
+        // function abc(name,ind) {
+        //     document.getElementById("hEl1").innerHTML=name;
+        //     document.getElementById("hEl2").innerHTML=ind;
+
+        // }
+
+        //------------------------------------------------------------------31
+        // var obj = [
+        //     {
+        //         firstname: "kavya",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Arshi",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Reshma",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Poojitha",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Raji",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     }
+        // ]
+
+        // var nameInd=<div>
+        //     {
+        //         obj.map((a,ind)=>{
+        //             return (
+        //             <li>{a.firstname} 
+        //                 <button onClick={()=>{abc(a.firstname,ind)}}>Click to see me</button>
+        //                 </li>
+        //         )})
+        //     }
+        //     <h1 id="hEl1"></h1>
+        //     <h2 id="hEl2"></h2>
+
+        //     </div>
+        // ReactDOM.render(nameInd,divid);
+
+        // function abc(name,ind) {
+        //     document.getElementById("hEl1").innerHTML=name;
+        //     document.getElementById("hEl2").innerHTML=ind;
+
+        // }
+
+        //-----------------------------------------------------------------------32
+        // var a=20;
+        // var h=<h1>
+        //     {a}
+        //     </h1>
+        // ReactDOM.render(h,divid);
+        //----------------------------------------------------------------------33
+        //     var a=14;       
+        //    var inc=<div>
+        //             <h1 id="hEl">{a}</h1>
+        //             <button onClick={()=>{abc()}}>Increment</button>
+        //     </div> 
+        //     ReactDOM.render(inc,divid);
+
+        //     function abc() {
+        //         a++;
+        //         document.getElementById("hEl").innerHTML=a;
+        //     }
+
+        //---------------------------------------------------------------------34
+        // var a = 87;
+        // var inc = <div>
+        //     <h1 id="hEl">{a}</h1>
+        //     <button onClick={() => { abc() }}>Decrement</button>
+        // </div>
+        // ReactDOM.render(inc, divid);
+
+        // function abc() {
+        //     a--;
+        //     document.getElementById("hEl").innerHTML = a;
+        // }
+        //--------------------------------------------------------------------35
+
+        // var a=10;
+        // var incdec=<div>
+        //     <h1 id="hEl">{a}</h1>
+        //     <button onClick={()=>{abc()}}>Increment</button><br/><br/>
+        //     <button onClick={()=>{xyz()}}>Decrement</button>
+        //     </div>
+        //     ReactDOM.render(incdec,divid);
+
+        //     function abc() {
+        //         a++;
+        //         document.getElementById("hEl").innerHTML=a;
+        //     }
+
+        //     function xyz() {
+        //         a--;
+        //         document.getElementById("hEl").innerHTML=a;
+        //     }
+        //--------------------------------------------------------------------36
+
+        // var a = 10;
+        // var incdec = <div>
+        //     <h1 id="hEl">{a}</h1>
+        //     <button onClick={() => { abc() }}>Increment</button>
+        //     <button onClick={() => { xyz() }}>Decrement</button>
+        //     <button onClick={() => { reset() }}>Reset</button>
+
+        // </div>
+        // ReactDOM.render(incdec, divid);
+
+        // function abc() {
+        //     a++;
+        //     document.getElementById("hEl").innerHTML = a;
+        // }
+
+        // function xyz() {
+        //     a--;
+        //     document.getElementById("hEl").innerHTML = a;
+        // }
+
+        // function reset() {
+        //     a=10;
+        //     document.getElementById("hEl").innerHTML = a;
+        // }
+        //----------------------------------------------------------37
+        // var ar=[];
+        // var pusharr=<div>
+        //     <input  id="inp" type="text"/>
+        //     <button onClick={()=>{abc()}}>click to push value</button>
+        //     </div>
+        // ReactDOM.render(pusharr,divid);
+
+        // function abc() {
+        //     ar.push(document.getElementById("inp").value);
+        //     console.log(ar);
+        // }
+        //----------------------------------------------------------38
+        // var ar = [];
+        // var pusharr = <div>
+        //     <input id="inp" type="text" />
+        //     <button onClick={() => { abc() }}>click to push value</button>
+        //     <h1 id="hEl"></h1>
+        // </div>
+        // ReactDOM.render(pusharr, divid);
+        // var hTag=document.getElementById("hEl");
+        // function abc() {
+        //     var parr=document.getElementById("inp").value;
+        //     ar.push(parr);
+        //     hTag.innerHTML=ar.join(",");
+        // }
+        //------------------------------------------------------------39
+        // var ar = [];
+        // var arrlist = <div>
+        //     <input id="inp" type="text" />
+        //     <button onClick={() => { abc() }}>push value</button>
+        //     <li id="list"></li>
+        // </div>
+        // ReactDOM.render(arrlist, divid);
+
+        // function abc() {
+        //     var parr = document.getElementById("inp").value;
+        //     ar.push(parr);
+        //     document.getElementById("list").innerHTML = parr;
+        // }
+
+        //---------------------------------------------------------------40
+
+        // var todo = <div>
+        //     <input type="text" id="inp" />
+        //     <button onClick={() => { abc() }}>Click me to add</button>
+        //     <ul id="u"></ul>
+        // </div>
+        // ReactDOM.render(todo, divid);
+        // var ar = [];
+        // function abc() {
+        //     var val = document.getElementById("inp").value;
+        //     ar.push(val);
+        //     genUI();
+        // }
+
+        // function genUI() {
+        //     document.getElementById("u").innerHTML = "";
+        //     ar.forEach((b, ind) => {
+        //         var li = document.createElement("li");
+        //         li.innerHTML = b;
+        //         var delBtn = document.createElement("button")
+        //         delBtn.innerHTML = "Delete";
+        //         delBtn.onclick = () => {
+        //             ar.splice(ind, 1);
+        //             genUI();
+        //         }
+        //         li.appendChild(delBtn);
+        //         document.getElementById("u").appendChild(li);
+        //     })
+        // }
+        //----------------------------------------------------------41
+        // var clock=<div>
+        //     <h1 id="hEl"></h1>
+        //     </div>
+        // ReactDOM.render(clock,divid); 
+
+        // function clk() {
+        //     var date=new Date();
+        //     var time=date.getHours()+" :"+date.getMinutes()+" :"+date.getSeconds();
+        //     document.getElementById("hEl").innerHTML=time;
+        // }
+        // setInterval(()=>{
+        //     clk()
+        // },1000)
+//------------------------------------------------------------42
+            // var stopwatch=<div>
+            //     <h1 id="hEl"></h1>
+            //     <button onClick={()=>{abc()}}>start</button>
+            //     <button onClick={()=>{abc()}}>stop</button>
+            //     <button onClick={()=>{abc()}}>pause</button>
+            //     </div>
+            // ReactDOM.render(stopwatch,divid);
+
+    </script>
+</body>
+
+</html>

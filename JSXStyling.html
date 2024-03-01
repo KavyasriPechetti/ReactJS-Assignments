@@ -1,0 +1,264 @@
+<html>
+
+<head>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        /* ul {
+            display: flex;
+        }
+
+        li {
+            border: 2px solid;
+            margin: 10px;
+            padding: 10px;
+            list-style: none;
+        } */
+
+        #d {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #d1 {
+            text-align: center;
+            border: 2px solid;
+            margin: 20px;
+        }
+
+        #d2 {
+            margin-left: 40px;
+            margin-bottom: 5px;
+
+        }
+
+        img {
+            border-radius: 50px;
+            width: 70px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dd"></div>
+    <script type="text/babel">
+        var divid = document.getElementById("dd");
+
+        // var red=<h1 style={{color:"red"}}>Kavya</h1>
+        // ReactDOM.render(red,divid);
+        //-----------------------------------------------------------
+        // var green=<h1 style={{color:"red",backgroundColor:"lightblue"}}>Kavya</h1>
+        // ReactDOM.render(green,divid);
+        //------------------------------------------------------------
+        // var ar=[14,15,2,11];
+        // var flexar=<ul>
+        //             {ar.map((a)=> {
+        //                 return (
+        //                     <li>{a}</li>
+        //                 )
+        //             })}
+        //     </ul>
+        // ReactDOM.render(flexar,divid);
+        //----------------------------------------------------------
+        // var ar=["kavya","sri","pechetti"];
+        // var sarr=<ul>
+        //     {
+        //         ar.map((a)=> {
+        //             return (
+        //                 <li>{a}</li>
+        //             )
+        //         })
+        //     }
+        //     </ul>
+        // ReactDOM.render(sarr,divid);
+        //-----------------------------------------------------------
+        // var ob = {
+        //     firstname: "kavya",
+        //     lastname: "pechetti",
+        //     gender: "female",
+        //     age: 21
+        // };
+
+        // var obj=<div>
+        //     {
+        //         Object.keys(ob).map((a)=>
+        //         {
+        //             return (
+        //                 <h1>{ a+ob[a]}</h1>
+        //             )
+        //         })
+        //     }</div>
+        // ReactDOM.render(obj,divid);
+        //------------------------------------------------------
+        // var ob = [
+        //     {
+        //         firstname: "kavya",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Arshi",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Reshma",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Poojitha",
+        //         lastname: "pechetti",
+        //         gender: "male",
+        //         age: 21
+        //     },
+        //     {
+        //         firstname: "Raji",
+        //         lastname: "pechetti",
+        //         gender: "female",
+        //         age: 21
+        //     }
+        // ]
+        // var maleimg="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17YmF-rLdK6WcLcTx8RoaSkS4jHDLj20GgQ&s";
+        // var femaleimg="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCI89MLwUuQB5nBrOGNBn-Oiqz_tSIyKzsA&s";
+        // var cards = <div id="d">
+        //     {
+        //         ob.map((a)=> {
+        //             return (
+        //                 <div id="d1" style={a.gender=="male" ?{backgroundColor:"lightblue"}: {backgroundColor:"pink"}}>
+        //                     <h3>FirstName: {a.firstname}</h3>
+        //                     <h3>LastName:{a.lastname}</h3>
+        //                     <h3>Gender:{a.gender}</h3>
+        //                     <h3>Age: {a.age}</h3>
+        //                     <div id="d2" style={{width : "50px"}}><img src={a.gender==="male"?maleimg:femaleimg}/>
+        //                     </div>
+
+        //                  </div>
+        //             )
+        //         })
+
+        //     }
+        // </div>
+
+        // ReactDOM.render(cards, divid);
+        //------------------------------------------------------------------
+        var ob = [
+            {
+                firstname: "kavya",
+                lastname: "pechetti",
+                gender: "female",
+                age: 21
+            },
+            {
+                firstname: "Arshi",
+                lastname: "pechetti",
+                gender: "male",
+                age: 21
+            },
+            {
+                firstname: "Reshma",
+                lastname: "pechetti",
+                gender: "female",
+                age: 21
+            },
+            {
+                firstname: "Poojitha",
+                lastname: "pechetti",
+                gender: "male",
+                age: 21
+            },
+            {
+                firstname: "Raji",
+                lastname: "pechetti",
+                gender: "female",
+                age: 21
+            }
+        ]
+        var maleimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17YmF-rLdK6WcLcTx8RoaSkS4jHDLj20GgQ&s";
+        var femaleimg = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShCI89MLwUuQB5nBrOGNBn-Oiqz_tSIyKzsA&s";
+        var mcol="lightblue";
+        var fcol="pink";
+        var tdata = <table border="5px" solid >
+
+            <thead>
+                <tr style={{backgroundColor:"grey"}}>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Gender Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    ob.map((a) => {
+                        return (
+                            <tr style={a.gender==="male"?{backgroundColor:mcol}:{backgroundColor:fcol}}>
+                                <td>{a.firstname}</td>
+                                <td>{a.lastname}</td>
+                                <td>{a.gender}</td>
+                                <td>{a.age}</td>
+                                <td><img src={a.gender==="male"?maleimg:femaleimg}/></td>
+                            </tr>
+                        )
+                    })
+                }
+            </tbody>
+
+        </table>
+        ReactDOM.render(tdata, divid);
+        //--------------------------------------------------------------------
+        // var a=20;
+        // var b=<div>
+        //         <h1 style={{border:`${a}px solid`}}>kavya</h1>
+        //     </div>
+
+        // ReactDOM.render(b,divid);
+        //-------------------------------------------------------------
+        // var a = 21;
+        // var color = <div>
+        //     <h1 style={a % 2 == 0 ? { color: "Green" } : { color: "red" }}>{a}</h1>
+        // </div>
+        // ReactDOM.render(color, divid);
+        //---------------------------------------------------------------
+        // var a = 14;
+        // var color = <div>
+        //     <h1 style={a >= 0 ? { color: "Green" } : { color: "red" }}>{a}</h1>
+        // </div>
+        // ReactDOM.render(color, divid);
+        //---------------------------------------------------------------
+        // var str=["kavya",,"maha","sri","lakshmii"];
+        // var list=<ul>
+        //     {
+        //         str.map((a)=> {
+        //             return (
+        //                 <li style={a.length % 2 == 0 ? {color:"blue"}: {color:"red"}}>{a.length}</li>
+        //             )
+        //         })
+        //     }
+        //     </ul>
+        // ReactDOM.render(list,divid);
+        //-------------------------------------------------------------------
+        // var ar = [10,14,15,87,2,11];
+        // var list = <ul>
+        //     {
+        //         ar.map((a) => {
+        //             return (
+        //                 <li style={a % 2 == 0 ? { color: "blue" } : { color: "red" }}>{a}</li>
+        //             )
+        //         })
+        //     }
+        // </ul>
+        // ReactDOM.render(list, divid);
+//----------------------------------------------------------------------
+
+
+    </script>
+</body>
+
+</html>
